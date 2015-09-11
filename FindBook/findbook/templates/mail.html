@@ -1,0 +1,13 @@
+<h3>Your search results for <strong>{{ search_term }}</strong></h3>
+{% if pages %}
+    <ul>
+        {% for page in pages %}
+        <li><p>Title: {{ page.chapter.book.title }}</p>
+            <p>Author: {{ page.chapter.book.author}}</p>
+            <p>(Chapter: {{page.chapter.name}},Page: {{ page.number }})</p>
+        </li>
+        {% endfor %}
+    {% else %}
+        <p>Books with such words not found!</p>
+    </ul>
+{% endif %}
