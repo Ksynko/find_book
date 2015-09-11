@@ -1,0 +1,183 @@
+[
+{
+  "fields": {
+    "author": "Allen B. Downey",
+    "title": "Think Python"
+  },
+  "model": "findbook.book",
+  "pk": 1
+},
+{
+  "fields": {
+    "author": "Sanjeev Jaiswal, Ratan Kumar",
+    "title": "Learning Django Web Development"
+  },
+  "model": "findbook.book",
+  "pk": 2
+},
+{
+  "fields": {
+    "author": "Harry Percival",
+    "title": "Test-Driven Development with Python"
+  },
+  "model": "findbook.book",
+  "pk": 3
+},
+{
+  "fields": {
+    "book": 1,
+    "name": "Chapter 0  Preface"
+  },
+  "model": "findbook.chapter",
+  "pk": 1
+},
+{
+  "fields": {
+    "book": 1,
+    "name": "Chapter 1  The way of the program"
+  },
+  "model": "findbook.chapter",
+  "pk": 2
+},
+{
+  "fields": {
+    "book": 2,
+    "name": "Introduction to Django"
+  },
+  "model": "findbook.chapter",
+  "pk": 3
+},
+{
+  "fields": {
+    "book": 2,
+    "name": "Getting Started"
+  },
+  "model": "findbook.chapter",
+  "pk": 4
+},
+{
+  "fields": {
+    "book": 3,
+    "name": "Getting Django Set Up Using a Functional Test"
+  },
+  "model": "findbook.chapter",
+  "pk": 5
+},
+{
+  "fields": {
+    "chapter": 1,
+    "text": "The Strange History of This Book\r\nIn January 1999 I was preparing to teach an introductory programming class in Java. I\r\nhad taught it three times and I was getting frustrated. The failure rate in the class was\r\ntoo high and, even for students who succeeded, the overall level of achievement was too\r\nlow.\r\nOne of the problems I saw was the books. They were too big, with too much unnecessary\r\ndetail about Java, and not enough high-level guidance about how to program. And they\r\nall suffered from the trap door effect: they would start out easy, proceed gradually, and\r\nthen somewhere around Chapter 5 the bottom would fall out. The students would get\r\ntoo much new material, too fast, and I would spend the rest of the semester picking up\r\nthe pieces.\r\nTwo weeks before the first day of classes, I decided to write my own book. My goals\r\nwere:\r\n\u2022 Keep it short. It is better for students to read 10 pages than not read 50 pages.\r\n\u2022 Be careful with vocabulary. I tried to minimize the jargon and define each term at\r\nfirst use.\r\n\u2022 Build gradually. To avoid trap doors, I took the most difficult topics and split them\r\ninto a series of small steps.\r\n\u2022 Focus on programming, not the programming language. I included the minimum\r\nuseful subset of Java and left out the rest.\r\nI needed a title, so on a whim I chose How to Think Like a Computer Scientist.",
+    "number": 1
+  },
+  "model": "findbook.page",
+  "pk": 1
+},
+{
+  "fields": {
+    "chapter": 1,
+    "text": "My first version was rough, but it worked. Students did the reading, and they understood\r\nenough that I could spend class time on the hard topics, the interesting topics and (most\r\nimportant) letting the students practice.\r\nI released the book under the GNU Free Documentation License, which allows users\r\nto copy, modify, and distribute the book.\r\nWhat happened next is the cool part. Jeff Elkner, a high school teacher in Virginia,\r\nadopted my book and translated it into Python. He sent me a copy of his translation,\r\nand I had the unusual experience of learning Python by reading my own book. As Green\r\nTea Press, I published the first Python version in 2001.\r\nIn 2003 I started teaching at Olin College and I got to teach Python for the first time.\r\nThe contrast with Java was striking. Students struggled less, learned more, worked on\r\nmore interesting projects, and generally had a lot more fun.\r\nOver the last nine years I continued to develop the book, correcting errors, improving\r\nsome of the examples and adding material, especially exercises.\r\nThe result is this book, now with the less grandiose title Think Python. Some of the\r\nchanges are:\r\n\u2022 I added a section about debugging at the end of each chapter. These sections present\r\ngeneral techniques for finding and avoiding bugs, and warnings about Python\r\npitfalls.\r\n\u2022 I added more exercises, ranging from short tests of understanding to a few sub\r\nstantial projects. And I wrote solutions for most of them.\r\n\u2022 I added a series of case studies\u2014longer examples with exercises, solutions, and\r\ndiscussion. Some are based on Swampy, a suite of Python programs I wrote for use\r\nin my classes. Swampy, code examples, and some solutions are available from http://\r\nthinkpython.com.\r\n\u2022 I expanded the discussion of program development plans and basic design patterns.\r\n\u2022 I added appendices about debugging, analysis of algorithms, and UML diagrams\r\nwith Lumpy.\r\nI hope you enjoy working with this book, and that it helps you learn to program and\r\nthink, at least a little bit, like a computer scientist.\r\n\u2014Allen B. Downey\r\nNeedham, MA",
+    "number": 2
+  },
+  "model": "findbook.page",
+  "pk": 2
+},
+{
+  "fields": {
+    "chapter": 2,
+    "text": "The Way of the Program\r\nThe goal of this book is to teach you to think like a computer scientist. This way of\r\nthinking combines some of the best features of mathematics, engineering, and natural\r\nscience. Like mathematicians, computer scientists use formal languages to denote ideas\r\n(specifically computations). Like engineers, they design things, assembling components\r\ninto systems and evaluating tradeoffs among alternatives. Like scientists, they observe\r\nthe behavior of complex systems, form hypotheses, and test predictions.\r\nThe single most important skill for a computer scientist is problem solving. Problem\r\nsolving means the ability to formulate problems, think creatively about solutions, and\r\nexpress a solution clearly and accurately. As it turns out, the process of learning to\r\nprogram is an excellent opportunity to practice problem-solving skills. That\u2019s why this\r\nchapter is called, \u201cThe way of the program.\u201d\r\nOn one level, you will be learning to program, a useful skill by itself. On another level,\r\nyou will use programming as a means to an end. As we go along, that end will become\r\nclearer.\r\nThe Python Programming Language\r\nThe programming language you will learn is Python. Python is an example of a high-\r\nlevel language; other high-level languages you might have heard of are C, C++, Perl,\r\nand Java.\r\nThere are also low-level languages, sometimes referred to as \u201cmachine languages\u201d or\r\n\u201cassembly languages.\u201d Loosely speaking, computers can only run programs written in\r\nlow-level languages. So programs written in a high-level language have to be processed\r\nbefore they can run. This extra processing takes some time, which is a small disadvantage\r\nof high-level languages.",
+    "number": 3
+  },
+  "model": "findbook.page",
+  "pk": 3
+},
+{
+  "fields": {
+    "chapter": 2,
+    "text": "The advantages are enormous. First, it is much easier to program in a high-level lan\r\nguage. Programs written in a high-level language take less time to write, they are shorter\r\nand easier to read, and they are more likely to be correct. Second, high-level languages\r\nare portable, meaning that they can run on different kinds of computers with few or no\r\nmodifications. Low-level programs can run on only one kind of computer and have to\r\nbe rewritten to run on another.\r\nDue to these advantages, almost all programs are written in high-level languages. Low-\r\nlevel languages are used only for a few specialized applications.\r\nTwo kinds of programs process high-level languages into low-level languages:\r\ninterpreters and compilers. An interpreter reads a high-level program and executes it,\r\nmeaning that it does what the program says. It processes the program a little at a time,\r\nalternately reading lines and performing computations. Figure 1-1 shows the structure\r\nof an interpreter.\r\nFigure 1-1. An interpreter processes the program a little at a time, alternately reading lines\r\nand performing computations.\r\nA compiler reads the program and translates it completely before the program starts\r\nrunning. In this context, the high-level program is called the source code, and the\r\ntranslated program is called the object code or the executable. Once a program is com\r\npiled, you can execute it repeatedly without further translation. Figure 1-2 shows the\r\nstructure of a compiler.\r\nFigure 1-2. A compiler translates source code into object code, which is run by a hardware\r\nexecutor.\r\nPython is considered an interpreted language because Python programs are executed\r\nby an interpreter. There are two ways to use the interpreter: interactive mode and script\r\nmode. In interactive mode, you type Python programs and the interpreter displays the\r\nresult:",
+    "number": 4
+  },
+  "model": "findbook.page",
+  "pk": 4
+},
+{
+  "fields": {
+    "chapter": 2,
+    "text": ">>> 1 + 1\r\n2\r\nThe chevron, >>> , is the prompt the interpreter uses to indicate that it is ready. If you\r\ntype 1 + 1 , the interpreter replies 2 .\r\nAlternatively, you can store code in a file and use the interpreter to execute the contents\r\nof the file, which is called a script. By convention, Python scripts have names that end\r\nwith .py .\r\nTo execute the script, you have to tell the interpreter the name of the file. If you have a\r\nscript named dinsdale.py and you are working in a UNIX command window, you type\r\npython dinsdale.py . In other development environments, the details of executing\r\nscripts are different. You can find instructions for your environment at the Python web\r\nsite http://python.org.\r\nWorking in interactive mode is convenient for testing small pieces of code because you\r\ncan type and execute them immediately. But for anything more than a few lines, you\r\nshould save your code as a script so you can modify and execute it in the future.\r\nWhat Is a Program?\r\nA program is a sequence of instructions that specifies how to perform a computation.\r\nThe computation might be something mathematical, such as solving a system of equa\r\ntions or finding the roots of a polynomial, but it can also be a symbolic computation,\r\nsuch as searching and replacing text in a document or (strangely enough) compiling a\r\nprogram.\r\nThe details look different in different languages, but a few basic instructions appear in\r\njust about every language:\r\ninput:\r\nGet data from the keyboard, a file, or some other device.\r\noutput:\r\nDisplay data on the screen or send data to a file or other device.\r\nmath:\r\nPerform basic mathematical operations like addition and multiplication.\r\nconditional execution:\r\nCheck for certain conditions and execute the appropriate code.\r\nrepetition:\r\nPerform some action repeatedly, usually with some variation.",
+    "number": 5
+  },
+  "model": "findbook.page",
+  "pk": 5
+},
+{
+  "fields": {
+    "chapter": 3,
+    "text": "Welcome to version 2.0 of Development with Django!\r\nDjango is a web development framework, and web development is a skill. To master\r\nany skill one can follow the famous \"10,000 hours\" rule, which says that if you practice\r\nanything for that amount of time you will certainly become an expert at it. But that's a\r\nlot of time, and without a proper plan, this can go wrong. Terribly wrong.\r\nSo, is there any better way to achieve your goal? Yes! Break the skill you want to\r\nlearn into smaller subskills and then master them one at a time. (Programmers call\r\nthis the \"divide and conquer\" rule.) You will need to identify the most important\r\nsubskills by researching them. The more the frequent mentions of the subskill, the\r\nmore important it becomes to master.\r\nAs you have decided to learn a new skill, as the author of this book, I request that\r\nyou make a commitment, that you will stick with this book in the early frustrating\r\nhours. Frustration happens when you are learning a new thing, and trust me on this:\r\nwhen you feel it's too simple, you are doing it right.\r\nIn this chapter, we will cover the following topics:\r\n\u2022\t Why web development in the first place?\r\n\u2022\t What has changed in web development\r\n\u2022\t The MVC pattern in web development\r\n\u2022\t Why Django\r\n\u2022\t Inside Django",
+    "number": 1
+  },
+  "model": "findbook.page",
+  "pk": 6
+},
+{
+  "fields": {
+    "chapter": 3,
+    "text": "Why web development in the first place?\r\nA website makes the first impression about the company or product directly on a\r\nglobal audience. Every startup now has a website, which helps to pitch their idea to\r\ntheir potential clients or investors.\r\nEverything is online now, so instead of just sitting and watching the change, why\r\nnot participate and learn to code it? Learning web development is one of the most\r\nvaluable investments you can make with your time. It will not only benefit you by\r\ngetting you a better job, but you will also be able to code your idea into a prototype\r\nin a very simple and straightforward manner.\r\nMust-have ingredients for web development include user interface and user\r\nexperience, but they are unfortunately out of the scope of this book.\r\nWhat has changed in web development\r\nWeb development has made great progress during the last few years. Some of the\r\nimprovements are listed as follows:\r\n\u2022\t JavaScript: Evolved from writing complex selectors to manipulating\r\nDocument Object Model (DOM). Libraries such as jQuery and AngularJs\r\nhave made frontend dynamics much simpler. JavaScript has even evolved to\r\nbuild a production-ready server-side framework called node.js.\r\n\u2022\t Browsers: Evolved from being as simplistic as breaking the page across\r\nbrowsers to now intelligently restoring the connection, telling you which tab\r\nis playing music, or flawlessly rendering a real-time game.\r\n\u2022\t Open source: Using code written by someone else has finally become\r\npreferable than writing your own code. This helped a lot of projects to stop\r\nreinventing the wheel, Django being one of the best examples.\r\n\u2022\t API as spinal cord: Web technologies today might not be the same\r\ntomorrow, or data might not be represented in the same way or in the same\r\nplace tomorrow. In other words, more devices will come with different\r\nscreen sizes. Therefore, its always best to have text separated from visuals.\r\n\u2022\t User Interface: In the past, the precious time of the development team was\r\nconsumed by User Interface design. But frameworks such as Bootstrap and\r\nFoundation have made web development a lot easier.",
+    "number": 2
+  },
+  "model": "findbook.page",
+  "pk": 7
+},
+{
+  "fields": {
+    "chapter": 4,
+    "text": "Python and Django are available for multiple platforms. In this chapter, we will see\r\nhow to set up our development environment on UNIX/Linux, Windows, and Mac\r\nOS X. We will also see how to create our first project and connect it to a database.\r\nWe will cover the following topics in this chapter:\r\n\u2022\tInstalling Python\r\n\u2022\tInstalling Django\r\n\u2022\tInstalling the database system\r\n\u2022\tCreating your first project\r\n\u2022\tSetting up the database\r\n\u2022\tSetting up the database\r\n\r\nOur development environment consists of Python, Django, and a database system.\r\nIn the following sections, we will see how to install these software packages.\r\nInstalling Python\r\nDjango is written in Python, so naturally, the first step in setting up our development\r\nenvironment is to install Python. Python is available for a variety of operating\r\nsystems, and installing Python is no different from installing other software\r\npackages. The procedure, however, depends on your operating system.\r\nFor installation, you need to make sure that you get a recent version of Python.\r\nDjango requires Python 2.7 or higher. The latest version of Python is 3.4.2 for 3.x\r\nand 2.7.9 for 2.x versions.\r\nPlease read the section relevant to your operating system for installation instructions.",
+    "number": 3
+  },
+  "model": "findbook.page",
+  "pk": 8
+},
+{
+  "fields": {
+    "chapter": 4,
+    "text": "Installing Python on Windows\r\nPython has a standard installer for Windows users. Simply head to https://www.\r\npython.org/download/ and download the latest version. Next, double-click on the\r\n.exe or .msi file and follow the installation instructions step by step. The graphical\r\ninstaller will guide you through the installation process and create shortcuts to\r\nPython executables in the Start menu.\r\nOnce done with the installation, we need to add the Python directory to the system\r\npath so that we can access Python while using the Command Prompt. To do so,\r\nfollow these steps:\r\n1.\t Open the Control Panel.\r\n2.\t Double-click on the System and Security icon or text and then look for\r\nSystem (as seen in Windows 7), as shown in the following screenshot:\r\n3.\t Click on Advanced System Settings and a pop-up window will appear.\r\n4.\t Click on the Environment Variables button and a new dialog box will open.\r\n5.\t Select the Path system variable and edit it.\r\n6.\t Append the path to where you installed Python as its value (the default path\r\nis usually c:\\PythonXX , where XX is your Python version), as shown in the\r\nfollowing screenshot:",
+    "number": 4
+  },
+  "model": "findbook.page",
+  "pk": 9
+},
+{
+  "fields": {
+    "chapter": 4,
+    "text": "If you want to test your installation, open the Run dialog box, type python , and hit\r\nthe Enter button. The Python interactive shell should open.\r\nDon't forget to separate the new path from the one before it\r\nwith a semicolon (;).\r\nInstalling Python on Unix/Linux\r\nIf you use Linux or another flavor of Unix, chances are that you already have Python\r\ninstalled. To check, open a terminal, type python , and hit the Enter button. If you see\r\nthe Python interactive shell, you already have Python installed. You should get the\r\nfollowing output after typing python in the terminal:\r\nPython 2.7.6 (default, Mar 22 2014, 22:59:56)\r\n[GCC 4.8.2] on linux2\r\nType \"help\", \"copyright\", \"credits\" or \"license\" for more information.",
+    "number": 5
+  },
+  "model": "findbook.page",
+  "pk": 10
+},
+{
+  "fields": {
+    "chapter": 5,
+    "text": "TDD isn\u2019t something that comes naturally. It\u2019s a discipline, like a martial art, and just\r\nlike in a Kung-Fu movie, you need a bad-tempered and unreasonable master to force\r\nyou to learn the discipline. Ours is the Testing Goat.\r\nObey the Testing Goat! Do Nothing Until You Have a Test\r\nThe Testing Goat is the unofficial mascot of TDD in the Python testing community. It\r\nprobably means different things to different people, but, to me, the Testing Goat is a\r\nvoice inside my head that keeps me on the True Path of Testing\u2014like one of those little\r\nangels or demons that pop up above your shoulder in the cartoons, but with a very niche\r\nset of concerns. I hope, with this book, to install the Testing Goat inside your head too.\r\nWe\u2019ve decided to build a website, even if we\u2019re not quite sure what it\u2019s going to do yet.\r\nNormally the first step in web development is getting your web framework installed and\r\nconfigured. Download this, install that, configure the other, run the script ... but TDD\r\nrequires a different mindset. When you\u2019re doing TDD, you always have the Testing Goat\r\ninside you \u2014 single-minded as goats are\u2014bleating \u201cTest first, test first!\u201d\r\nIn TDD the first step is always the same: write a test.\r\nFirst we write the test, then we run it and check that it fails as expected. Only then do we\r\ngo ahead and build some of our app. Repeat that to yourself in a goat-like voice. I know\r\nI do.\r\nAnother thing about goats is that they take one step at a time. That\u2019s why they seldom",
+    "number": 1
+  },
+  "model": "findbook.page",
+  "pk": 11
+},
+{
+  "fields": {
+    "chapter": 5,
+    "text": "We\u2019ll proceed with nice small steps; we\u2019re going to use Django, which is a popular Python\r\nweb framework, to build our app.\r\nThe first thing we want to do is check that we\u2019ve got Django installed, and that it\u2019s ready\r\nfor us to work with. The way we\u2019ll check is by confirming that we can spin up Django\u2019s\r\ndevelopment server and actually see it serving up a web page, in our web browser, on\r\nour local PC. We\u2019ll use the Selenium browser automation tool for this.\r\nCreate a new Python file called functional_tests.py, wherever you want to keep the code\r\nfor your project, and enter the following code. If you feel like making a few little goat\r\nnoises as you do it, it may help:",
+    "number": 2
+  },
+  "model": "findbook.page",
+  "pk": 12
+},
+{
+  "fields": {
+    "chapter": 5,
+    "text": "from selenium import webdriver\r\nbrowser = webdriver.Firefox()\r\nbrowser.get('http://localhost:8000')\r\nassert 'Django' in browser.title\r\nAdieu to Roman Numerals!\r\nSo many introductions to TDD use Roman numerals as an example that it\u2019s a running\r\njoke\u2014I even started writing one myself. If you\u2019re curious, you can find it on my GitHub\r\npage.\r\nRoman numerals, as an example, are both good and bad. It\u2019s a nice \u201ctoy\u201d problem,\r\nreasonably limited in scope, and you can explain TDD quite well with it.\r\nThe problem is that it can be hard to relate to the real world. That\u2019s why I\u2019ve decided to\r\nuse building a real web app, starting from nothing, as my example. Although it\u2019s a simple\r\nweb app, my hope is that it will be easier for you to carry across to your next real project.\r\nThat\u2019s our first functional test (FT); I\u2019ll talk more about what I mean by functional tests,\r\nand how they contrast with unit tests. For now, it\u2019s enough to assure ourselves that we\r\nunderstand what it\u2019s doing:\r\n\u2022 Starting a Selenium webdriver to pop up a real Firefox browser window\r\n\u2022 Using it to open up a web page which we\u2019re expecting to be served from the local\r\nPC\r\n\u2022 Checking (making a test assertion) that the page has the word \u201cDjango\u201d in its title\r\nLet\u2019s try running it:\r\n$ python3 functional_tests.py\r\nTraceback (most recent call last):\r\nFile \"functional_tests.py\", line 6, in <module>\r\nassert 'Django' in browser.title\r\nAssertionError\r\nYou should see a browser window pop up and try and open localhost:8000, and then the\r\nPython error message should appear. And then, you will probably be irritated at the fact\r\nthat it left a Firefox window lying around your desktop for you to tidy up. We\u2019ll fix that\r\nlater!",
+    "number": 3
+  },
+  "model": "findbook.page",
+  "pk": 13
+}
+]
