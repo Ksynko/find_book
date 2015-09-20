@@ -8,6 +8,8 @@ from django.template import Context
 from django.http import HttpResponse
 from django.conf import settings
 
+from haystack.query import SearchQuerySet
+
 from .forms import SearchForm
 from .models import Page
 
@@ -23,7 +25,16 @@ def index(request):
             start_time = datetime.datetime.now()
             logger.info("Start search, " + str(start_time))
 
-            pages = Page.objects.filter(text__icontains=search_term)
+            # old version for search
+            # pages = Page.objects.filter(text__icontains=search_term
+            # ).order_by('number')
+            # print pages, '***'
+
+            # new version
+            results = SearchQuerySet().filter(text__icontains=search_term)
+            pages = [r.object for r in results]
+            pages.sort(key=lambda x: (x.chapter.book.title, x.number),
+                       reverse=False)
 
             end_time = datetime.datetime.now()
             logger.info("End search, " + str(end_time))
