@@ -1,4 +1,4 @@
-Django==1.8.4
+Django==2.2.24
 argparse==1.2.1
 certifi==2015.9.6.2
 django-haystack==2.4.0
